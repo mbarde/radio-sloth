@@ -6,9 +6,9 @@ import vlc
 
 class StreamChannel(Channel):
 
-    def __init__(self, args):
-        super().__init__()
-        self.urls = args['urls']
+    def __init__(self, config):
+        super().__init__(config)
+        self.urls = self.args['urls']
         self.player = None
 
     def play(self):
